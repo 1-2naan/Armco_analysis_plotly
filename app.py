@@ -86,8 +86,8 @@ for uploaded_file in uploaded_files:
     # User inputs for peak detection parameters
     max_width = st.slider('Select Maximum Peak Width', 1, 200, 30, key=f"max_width_{uploaded_file.name}")
     min_width = st.slider('Select Minimum Peak Width', 1, 200, 40, key=f"min_width_{uploaded_file.name}")
-    max_threshold_multiplier = st.slider('Maximum Peak Threshold Multiplier', 0.5, 2.0, 1.0, 0.1, key=f"max_threshold_{uploaded_file.name}")
-    min_threshold_multiplier = st.slider('Minimum Peak Threshold Multiplier', 1.0, 3.0, 1.5, 0.1, key=f"min_threshold_{uploaded_file.name}")
+    max_threshold_multiplier = st.slider('Maximum Peak Threshold Multiplier', 0.2, 2.0, 1.0, 0.1, key=f"max_threshold_{uploaded_file.name}")
+    min_threshold_multiplier = st.slider('Minimum Peak Threshold Multiplier', 0.2, 3.0, 1.5, 0.1, key=f"min_threshold_{uploaded_file.name}")
 
     peaks_df = plot_hand_movement(df2, max_width, min_width, max_threshold_multiplier, min_threshold_multiplier)
 
